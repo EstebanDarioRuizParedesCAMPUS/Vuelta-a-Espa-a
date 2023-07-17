@@ -1,18 +1,18 @@
 import Etapas from "../modules/etapas.js"
 
-const obtenerAcciones = async (req,res) => {
+const obtenerEtapa = async (req,res) => {
     try {
-        const acciones = await Acciones.find()
-        res.json(acciones)
+        const etapa = await Etapas.find()
+        res.json(etapa)
     } catch (error) {
         console.log(error);
     }
 }
 
-const obtenerUnaAccion = async (req,res) => {
+const obtenerUnaEtapa = async (req,res) => {
     try {
-        const accion = await Acciones.findOne({_id:req.params.id})
-        res.json(accion)
+        const etapa = await Etapas.findOne({_id:req.params.id})
+        res.json(etapa)
     } catch (error) {
         res.status(404)
         res.send({error:"Acción no existe"})
@@ -20,19 +20,19 @@ const obtenerUnaAccion = async (req,res) => {
     }
 }
 
-const agregarAccion = async (req,res) => {
-    const accion = new Acciones(req.body)
+const agregarEtapa = async (req,res) => {
+    const etapa = new Etapas(req.body)
     try {
-        const nuevaAccion = await accion.save()
-        res.json(nuevaAccion)
+        const nuevaetapa = await etapa.save()
+        res.json(nuevaetapa)
     } catch (error) {
         console.log(error);
     }
 }
 
-const borrarAccion = async (req,res) => {
+const borrarEtapa = async (req,res) => {
     try {
-        await Acciones.deleteOne({_id:req.params.id})
+        await Etapas.deleteOne({_id:req.params.id})
         res.status(204).send()
     } catch (error) {
         res.status(404)
@@ -41,17 +41,13 @@ const borrarAccion = async (req,res) => {
     }
 }
 
-const actualizarAccion = async (req,res) => {
+const actualizarEtapa = async (req,res) => {
     try {
-        const accion = await Acciones.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
-        res.json(accion)
+        const etapa = await Etapas.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
+        res.json(etapa)
     } catch (error) {
         console.log(error);
     }
 }
 
-export {obtenerAcciones,
-    obtenerUnaAccion,
-    agregarAccion,
-    borrarAccion,
-    actualizarAccion}
+export {obtenerEtapa,obtenerUnaEtapa,agregarEtapa,borrarEtapa,actualizarEtapa}

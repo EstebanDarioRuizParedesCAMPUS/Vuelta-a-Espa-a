@@ -3,17 +3,17 @@ import mongoose from "mongoose";
 const equiposShema = mongoose.Schema({
     Nombre: {
         type: String,
-        required: true,
+        require: true,
         trim:true,
     },
     Localidad: {
         type: String,
-        required:true,
+        require:true,
         trim:true,
     },
     Entrenador :{
         type: String,
-        required:true,
+        require:true,
         trim:true,  
     }
 },

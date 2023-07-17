@@ -50,8 +50,4 @@ const actualizarPremio = async (req,res) => {
     }
 }
 
-export {obtenerPremios,
-    obtenerUnPremio,
-    agregarPremio,
-    borrarPremio,
-    actualizarPremio}
+export {obtenerPremios,obtenerUnPremio,agregarPremio,borrarPremio,actualizarPremio}

@@ -8,8 +8,9 @@ import Premiosrouter from "../routes/premios.routes.js";
 class Server{
     constructor(){
         this.app = express()
+        this.app.use(express.json())
         this.port = process.env.PORT
-        this.api = `/API/values`
+        this.api = `/API`
         this.midleware()
         this.routes()
     }

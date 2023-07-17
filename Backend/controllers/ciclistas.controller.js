@@ -15,7 +15,7 @@ const obtenerUnCiclista = async (req,res) => {
         res.json(ciclista)
     } catch (error) {
         res.status(404)
-        res.send({error:"Acción no existe"})
+        res.send({error:"Ciclista no existe"})
         console.log(error);
     }
 }
@@ -36,7 +36,7 @@ const borrarCiclista = async (req,res) => {
         res.status(204).send()
     } catch (error) {
         res.status(404)
-        res.send({error:"Acción no existe"})
+        res.send({error:"Ciclista no existe"})
         console.log(error);
     }
 }
@@ -50,8 +50,4 @@ const actualizarCiclista = async (req,res) => {
     }
 }
 
-export {obtenerCiclista,
-    obtenerUnCiclista,
-    agregarCiclista,
-    borrarCiclista,
-    actualizarCiclista}
+export {obtenerCiclista,obtenerUnCiclista,agregarCiclista,borrarCiclista,actualizarCiclista}

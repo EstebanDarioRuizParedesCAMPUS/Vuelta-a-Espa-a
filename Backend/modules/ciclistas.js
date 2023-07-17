@@ -3,22 +3,22 @@ import mongoose from "mongoose";
 const ciclistasShema = mongoose.Schema({
     nombre: {
         type: String,
-        required: true,
+        require: true,
         trim:true,
     },
     nacionalidad: {
         type: String,
-        required:true,
+        require:true,
         trim:true,
     },
     edad :{
         type: String,
-        required:true,
+        require:true,
         trim:true,  
     },
     logros :{
         type: String,
-        required:true,
+        require:true,
         trim:true,  
     },
 
