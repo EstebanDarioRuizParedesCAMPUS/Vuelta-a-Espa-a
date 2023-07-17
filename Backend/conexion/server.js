@@ -1,6 +1,10 @@
 import express  from "express";
 import cors from "cors"
-
+import conectarDB from "./conexion.js";
+import Cliclistasrouter from "../routes/ciclistas.routes.js";
+import Equposrouter from "../routes/equipos.routes.js";
+import Etapasrouter from "../routes/etapas.routes.js";
+import Premiosrouter from "../routes/premios.routes.js";
 class Server{
     constructor(){
         this.app = express()
@@ -16,16 +20,20 @@ class Server{
     }
 
     routes(){
-        this.app.use(`${this.api}/ciclista`, )
-        this.app.use(`${this.api}/equipos`, )
-        this.app.use(`${this.api}/etapas`, )
-        this.app.use(`${this.api}/premios`, )
+        this.app.use(`${this.api}/ciclista`,Cliclistasrouter )
+        this.app.use(`${this.api}/equipos`, Equposrouter )
+        this.app.use(`${this.api}/etapas`, Etapasrouter )
+        this.app.use(`${this.api}/premios`, Premiosrouter)
     }
 
     listen(){
         this.app.listen(this.port,()=>{
             console.log(`Server is Running in Port ${this.port}`);
         })
+    }
+
+    conection(){
+        conectarDB()
     }
 
 } 
