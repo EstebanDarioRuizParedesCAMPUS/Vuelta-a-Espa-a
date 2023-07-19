@@ -1,4 +1,5 @@
 import Equipos from "../modules/equipos.js"
+import bcryptjs from "bcryptjs"
 
 const obtenerEquipo = async (req,res) => {
     try {

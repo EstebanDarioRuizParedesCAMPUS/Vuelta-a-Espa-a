@@ -8,12 +8,12 @@ const ciclistasShema = mongoose.Schema({
     },
     nacionalidad: {
         type: String,
-        require:true,
+        required: [true,'Nombre del ciclista es requierido'],
         trim:true,
     },
     edad :{
         type: String,
-        require:true,
+        required: [true,'Nombre del ciclista es requierido'],
         trim:true,  
     },
     logros :{
@@ -23,12 +23,7 @@ const ciclistasShema = mongoose.Schema({
     },
     Equipo :{
         type: String,
-        require:true,
-        trim:true,  
-    },
-    Etapas :{
-        type: String,
-        require:true,
+        required: [true,'Nombre del ciclista es requierido'],
         trim:true,  
     },
 

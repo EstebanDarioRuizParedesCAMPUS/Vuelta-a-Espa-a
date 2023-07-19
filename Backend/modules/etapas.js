@@ -3,18 +3,19 @@ import mongoose from "mongoose";
 const etapasShema = mongoose.Schema({
     participante1: {
         type: String,
-        require: true,
+        required: [true,'Debe haber al menos 4 participantes por Etapa'],
     },
     participante2: {
         type: String,
-        require: true,
+        required: [true,'Debe haber al menos 4 participantes por Etapa'],
     },
     participante3: {
         type: String,
-        require: true,
-    },participante4: {
+        required: [true,'Debe haber al menos 4 participantes por Etapa'],
+    },
+    participante4: {
         type: String,
-        require: true,
+        required: [true,'Debe haber al menos 4 participantes por Etapa'],
     },
     participante4: {
         type: String,
@@ -24,17 +25,6 @@ const etapasShema = mongoose.Schema({
     },
     participante5: {
         type: String,
-    },
-
-    localizacion: {
-        type: String,
-        require:true,
-        trim:true,
-    },
-    recorrido :{
-        type: String,
-        require:true,
-        trim:true,  
     },
     recorrido :{
         type: String,

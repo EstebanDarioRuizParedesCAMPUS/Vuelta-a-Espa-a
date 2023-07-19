@@ -1,4 +1,5 @@
 import Etapas from "../modules/etapas.js"
+import bcryptjs from "bcryptjs"
 
 const obtenerEtapa = async (req,res) => {
     try {

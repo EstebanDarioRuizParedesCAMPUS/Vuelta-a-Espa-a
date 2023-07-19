@@ -1,4 +1,5 @@
 import Ciclistas from "../modules/ciclistas.js";
+import bcryptjs from "bcryptjs"
 
 const obtenerCiclista = async (req,res) => {
     try {

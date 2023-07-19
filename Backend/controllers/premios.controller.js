@@ -1,4 +1,5 @@
 import Premios from "../modules/premios.js"
+import bcryptjs from "bcryptjs"
 
 const obtenerPremios = async (req,res) => {
     try {
