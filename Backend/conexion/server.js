@@ -11,6 +11,7 @@ class Server{
         this.app.use(express.json())
         this.port = process.env.PORT
         this.api = `/API`
+        this.conection()
         this.midleware()
         this.routes()
     }
@@ -33,8 +34,8 @@ class Server{
         })
     }
 
-    conection(){
-        conectarDB()
+    async conection(){
+        await conectarDB()
     }
 
 } 

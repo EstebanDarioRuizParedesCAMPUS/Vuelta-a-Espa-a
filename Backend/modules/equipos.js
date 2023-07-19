@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const equiposShema = mongoose.Schema({
-    Nombre: {
+    NombreEquipo: {
         type: String,
         require: true,
-        trim:true,
+        unique:true,
     },
     Localidad: {
         type: String,
@@ -15,7 +15,7 @@ const equiposShema = mongoose.Schema({
         type: String,
         require:true,
         trim:true,  
-    }
+    },
 },
 {
     timestamps: true,

@@ -1,21 +1,15 @@
 import mongoose from "mongoose";
 
 const premiosShema = mongoose.Schema({
-    primerLugar: {
+    Premio: {
         type: String,
         require: true,
         trim:true,
     },
-    segundoLugar: {
+    Etapa: {
         type: String,
         require:true,
-        trim:true,
     },
-    tercerLugar :{
-        type: String,
-        require:true,
-        trim:true,  
-    }
 },
 {
     timestamps: true,

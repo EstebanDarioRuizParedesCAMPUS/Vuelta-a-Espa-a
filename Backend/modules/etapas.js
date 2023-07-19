@@ -1,11 +1,31 @@
 import mongoose from "mongoose";
 
 const etapasShema = mongoose.Schema({
-    participantes: {
+    participante1: {
         type: String,
         require: true,
-        trim:true,
     },
+    participante2: {
+        type: String,
+        require: true,
+    },
+    participante3: {
+        type: String,
+        require: true,
+    },participante4: {
+        type: String,
+        require: true,
+    },
+    participante4: {
+        type: String,
+    },
+    participante5: {
+        type: String,
+    },
+    participante5: {
+        type: String,
+    },
+
     localizacion: {
         type: String,
         require:true,
@@ -15,7 +35,17 @@ const etapasShema = mongoose.Schema({
         type: String,
         require:true,
         trim:true,  
-    }
+    },
+    recorrido :{
+        type: String,
+        require:true,
+        trim:true,  
+    },
+    Premio :{
+        type: String,
+        require:true,
+        trim:true,  
+    },
 },
 {
     timestamps: true,
